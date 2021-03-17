@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     server = require('gulp-webserver'),
     tildeImporter = require('node-sass-tilde-importer');
 
+var browserSync = require('browser-sync').create();
+
 // Remove previous dist folder if exists
 gulp.task('clean', function () {
     return gulp.src('dist', {read: false, allowEmpty: true})
@@ -62,3 +64,13 @@ gulp.task('build',
         'server'
     )
 );
+
+//Browser sync
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
