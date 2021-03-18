@@ -15,7 +15,7 @@ block article
                   "uk-article " +
                   "tm-ignore-container")
 
-      header.uk-text-center
+      header
         //- Title
         h1.uk-article-title= page.title
 
@@ -29,13 +29,9 @@ block article
           li Veliki izbor keramičkih pločica.
 
         h2.uk-text-center Prodavnica
-        p Maloprodaja se nalazi u trgovačkom centru u Aranđelovcu, sa obezbeđenim parkingom i utovarnim mestom.
+        p Maloprodajni objekat se nalazi u trgovačkom centru u Aranđelovcu, sa obezbeđenim parkingom i utovarnim mestom.
         figure
           div.uk-text-bolder= shopInfo.storeName
           div!= shopInfo.address
           div= shopInfo.openingHours
-        div.tm-wrapper
-          figure.tm-ratio.tm-ratio-16-9.js-map(
-            data-latitude="59.9356728"
-            data-longitude="30.3258604"
-            data-zoom="14")
+        

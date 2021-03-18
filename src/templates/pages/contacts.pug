@@ -3,7 +3,7 @@ extends /layouts/_informational
 block vars
   -
     page = {
-      title: 'Contacts',
+      title: 'Kontakt',
       breadcrumbs: {}
     }
 
@@ -23,11 +23,11 @@ block informational
         data-longitude="30.3258604"
         data-zoom="14")
 
-    div(class="uk-child-width-1-1 uk-child-width-1-2@s uk-margin-top"
+    div(class="uk-child-width-1-1 uk-child-width-1-1@s uk-margin-top"
             uk-grid)
 
-      section
-        h3 Store
+      section.uk-text-center
+        h3 Prodavnica
         ul.uk-list
           li
             a.uk-link-heading(href="#")
@@ -46,23 +46,13 @@ block informational
               +icon("clock")(class="uk-margin-small-right")
               span= shopInfo.openingHours
 
-      section
-        h3 Feedback
-        dl.uk-description-list
-          dt Cooperation
-          dd: a.uk-link-muted(href="#") cooperation@example.com
-          dt Partners
-          dd: a.uk-link-muted(href="#") partners@example.com
-          dt Press
-          dd: a.uk-link-muted(href="#") press@example.com
-
       section.uk-width-1-1
-        h2.uk-text-center Contact Us
+        h2.uk-text-center Pitajte nas / Kontaktirajte nas
         form
           div.uk-grid-small.uk-child-width-1-1(uk-grid)
             div
               label
-                div.uk-form-label.uk-form-label-required Name
+                div.uk-form-label.uk-form-label-required Ime
                 input.uk-input(type="text" required)
             div
               label
@@ -72,12 +62,12 @@ block informational
               label
                 div.uk-form-label Topic
                 select.uk-select
-                  option Customer service
-                  option Tech support
-                  option Other
+                  option Servis za kupce
+                  option Tehnička podrška
+                  option Drugo
             div
               label
-                div.uk-form-label Message
+                div.uk-form-label Poruka
                 textarea.uk-textarea(rows="5")
             div.uk-text-center
-              button.uk-button.uk-button-primary Send
+              button.uk-button.uk-button-primary Pošalji
